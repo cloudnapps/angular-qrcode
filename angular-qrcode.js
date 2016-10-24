@@ -126,6 +126,10 @@ angular.module('monospaced.qrcode', [])
               }
             };
 
+        if(attrs.mode === 'image') {
+          canvas2D = false;
+        }
+        
         if (link) {
           link.className = 'qrcode-link';
           $canvas.wrap(link);
